@@ -1,0 +1,178 @@
+% !TeX program = xelatex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% HKUST(GZ) Beamer 中文模板                           %
+% Based on the English template in slide.tex          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[UTF8, fontset=none, aspectratio=169]{ctexbeamer}
+%\documentclass[UTF8, fontset=none]{ctexbeamer}  % for 4:3 ratio
+\setmainfont{Times New Roman}
+\setsansfont{Arial}
+\setmonofont{Menlo}
+\setCJKmainfont{Songti SC}[BoldFont={Songti SC Bold}]
+\setCJKsansfont{Heiti SC}[BoldFont={Heiti SC Medium}]
+\setCJKmonofont{Songti SC}
+
+\usepackage{hyperref}
+\usepackage{latexsym,amsmath,xcolor,multicol,booktabs,calligra}
+\usepackage{graphicx,pstricks,listings,stackengine}
+\usepackage{lipsum}
+
+\author{吴晓均}
+\title{主标题}
+\subtitle{副标题}
+\institute{
+    xwu647@connect.hkust-gz.edu.cn \\
+    wuxiaojun@idea.edu.cn \\
+    香港科技大学（广州）\\
+}
+\date{\small \today}
+\usepackage{HKUSTstyle}
+\usefonttheme{serif}
+\setbeamerfont{title}{family=\sffamily,series=\bfseries}
+\setbeamerfont{subtitle}{family=\sffamily}
+\setbeamerfont{frametitle}{family=\sffamily,series=\bfseries,size=\large}
+\setbeamerfont{block title}{family=\sffamily,series=\bfseries}
+
+% defs
+\def\cmd#1{\texttt{\color{red}\footnotesize $\backslash$#1}}
+\def\env#1{\texttt{\color{blue}\footnotesize #1}}
+% set colors
+\definecolor{hkustyellow}{RGB}{167, 131, 55}
+\definecolor{hkustblue}{RGB}{0, 56, 116}
+\definecolor{hkustred}{RGB}{209, 51, 59}
+
+\lstset{
+    basicstyle=\ttfamily\small,
+    keywordstyle=\bfseries\color{deepblue},
+    emphstyle=\ttfamily\color{deepred},
+    stringstyle=\color{deepgreen},
+    numbers=left,
+    numberstyle=\small\color{halfgray},
+    rulesepcolor=\color{red!20!green!20!blue!20},
+    frame=shadowbox,
+}
+
+\newcounter{sectionframe}[section]
+\renewcommand{\thesectionframe}{\arabic{section}.\arabic{sectionframe}}
+\newcommand{\numberedframetitle}[1]{%
+    \stepcounter{sectionframe}%
+    \frametitle{\thesectionframe\ #1}%
+}
+
+%- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+\begin{document}
+
+\begin{frame}
+    \titlepage
+    \vspace*{-0.6cm}
+    \begin{figure}[htpb]
+        \begin{center}
+            \includegraphics[height=0.9cm, keepaspectratio]{pic/UST.png}
+            \hspace{1cm}
+            \includegraphics[height=0.9cm, keepaspectratio]{pic/idea.png}
+        \end{center}
+    \end{figure}
+\end{frame}
+
+\begin{frame}
+\tableofcontents[sectionstyle=show,
+subsectionstyle=show/shaded/hide,
+subsubsectionstyle=show/shaded/hide]
+\end{frame}
+
+% Introduction --- --- --- --- --- --- --- --- --- --- --- ---
+
+\section{引言}
+\begin{frame}
+    \numberedframetitle{背景与动机}
+    \begin{block}{为什么要做学术报告}
+        \begin{itemize}
+            \item 展示研究工作的核心论点与主要结果
+            \item 激发听众阅读完整论文或报告的兴趣
+            \item 目标：信息清晰、结构完整，并保持适度的吸引力
+        \end{itemize}
+    \end{block}
+    \begin{block}{使用 \LaTeX{} 与 beamer 制作幻灯片的优势}
+        \begin{itemize}
+            \item 如果论文或报告已使用 \LaTeX{} 撰写，迁移成本较低
+            \item 可选择多种成熟主题，适合正式学术汇报
+            \item 可以借助 \emph{beamerarticle} 生成讲义版本
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+\begin{frame}
+    \numberedframetitle{研究问题}
+
+   这里填写你的研究问题。
+
+\end{frame}
+
+% Literature Review --- --- --- --- --- --- --- --- --- --- ---
+\section{文献综述}
+\begin{frame}
+    \numberedframetitle{研究缺口}
+
+   这里填写你的文献缺口。
+
+\end{frame}
+
+\begin{frame}
+    \numberedframetitle{研究问题}
+
+   这里填写文献综述部分的主要内容。
+
+\end{frame}
+
+% Methods --- --- --- --- --- --- --- --- --- --- ---
+\section{研究方法}
+\begin{frame}
+    \numberedframetitle{方法概览}
+    \begin{itemize}
+        \item 这里填写研究设计、数据来源、模型或分析步骤。
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \numberedframetitle{图表示例}
+    \begin{figure}
+        \centering
+            \includegraphics[height=5cm]{pic/UST.png}
+        \caption{大学标志示例。}
+        \label{fig:unilogo}
+    \end{figure}
+\end{frame}
+
+
+% Results --- --- --- --- --- --- --- --- --- --- ---
+\section{研究结果}
+\begin{frame}
+    \numberedframetitle{主要发现}
+    \begin{itemize}
+        \item 结果一
+        \item 结果二
+        \item 结果三
+        \item 结果四
+    \end{itemize}
+\end{frame}
+
+
+% --- Thank you slide ---
+\begin{frame}
+\begin{center}
+{感谢聆听！}
+\vspace{1cm}
+
+吴晓均 \\[1em]
+xwu647@connect.hkust-gz.edu.cn \\
+wuxiaojun@idea.edu.cn
+
+\vspace{1cm}
+\includegraphics[height=0.9cm, keepaspectratio]{pic/UST.png}
+\hspace{1cm}
+\includegraphics[height=0.9cm, keepaspectratio]{pic/idea.png}
+\end{center}
+\end{frame}
+
+\end{document}
