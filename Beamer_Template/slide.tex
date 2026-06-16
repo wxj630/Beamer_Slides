@@ -15,12 +15,12 @@
 \usepackage{graphicx,pstricks,listings,stackengine}
 \usepackage{lipsum}
 
-\author{Your Name}
+\author{Xiaojun Wu}
 \title{Your Main Title}
 \subtitle{Your Subtitle}
 \institute{
-   @connect.hkust-gz.edu.cn \\
-    Urban Governance and Design Thrust, Society Hub \\
+    xwu647@connect.hkust-gz.edu.cn \\
+    wuxiaojun@idea.edu.cn \\
     The Hong Kong University of Science and Technology(GZ) \\
 }
 \date{\small \today}
@@ -46,6 +46,13 @@
     frame=shadowbox,
 }
 
+\newcounter{sectionframe}[section]
+\renewcommand{\thesectionframe}{\arabic{section}.\arabic{sectionframe}}
+\newcommand{\numberedframetitle}[1]{%
+    \stepcounter{sectionframe}%
+    \frametitle{\thesectionframe\ #1}%
+}
+
 %- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- 
 \begin{document}
 
@@ -54,7 +61,9 @@
     \vspace*{-0.6cm}
     \begin{figure}[htpb]
         \begin{center}
-            \includegraphics[keepaspectratio, scale=0.02]{pic/UST.png}
+            \includegraphics[height=0.9cm, keepaspectratio]{pic/UST.png}
+            \hspace{1cm}
+            \includegraphics[height=0.9cm, keepaspectratio]{pic/idea.png}
         \end{center}
     \end{figure}
 \end{frame}
@@ -68,8 +77,8 @@ subsubsectionstyle=show/shaded/hide]
 % Introduction --- --- --- --- --- --- --- --- --- --- --- --- 
 
 \section{Introduction}
-\begin{frame}{Background and Motivation}
-	\frametitle<presentation>{Background and Motivation}
+\begin{frame}
+	\numberedframetitle{Background and Motivation}
 	\begin{block}{Why to give a presentation:}
 		\begin{itemize}
 			\item show the main arguments and results of your work
@@ -86,7 +95,8 @@ subsubsectionstyle=show/shaded/hide]
 	\end{block}
 \end{frame}
 
-\begin{frame}{Research question}
+\begin{frame}
+	\numberedframetitle{Research question}
 
    this is a Research question.
 
@@ -94,13 +104,15 @@ subsubsectionstyle=show/shaded/hide]
 
 % Literature Review --- --- --- --- --- --- --- --- --- --- --- 
 \section{Literature Review}
-\begin{frame}{Research gap}
+\begin{frame}
+	\numberedframetitle{Research gap}
 
    this is a Literature gap.
 
 \end{frame}
 
-\begin{frame}{Research question}
+\begin{frame}
+	\numberedframetitle{Research question}
 
    this is a Literature Review.
 
@@ -108,14 +120,15 @@ subsubsectionstyle=show/shaded/hide]
 
 % Methods --- --- --- --- --- --- --- --- --- --- --- 
 \section{Methods}
-\begin{frame}{Title}
+\begin{frame}
+    \numberedframetitle{Title}
     \begin{itemize}
         \item different themes which are usable in practice
     \end{itemize}
 \end{frame}
 
 \begin{frame}
-	\frametitle<presentation>{Figures}
+	\numberedframetitle{Figures}
 	\begin{figure}
 		\centering
 			\includegraphics[height=5cm]{pic/UST.png}
@@ -128,6 +141,7 @@ subsubsectionstyle=show/shaded/hide]
 % Results --- --- --- --- --- --- --- --- --- --- --- 
 \section{Results}
 \begin{frame}
+	\numberedframetitle{Results}
     \begin{itemize}
         \item different themes
         \item different themes
@@ -143,8 +157,14 @@ subsubsectionstyle=show/shaded/hide]
 { Thank you for listening !}
 \vspace{1cm}
 
-Your Name \\[1em]
-@connect.hkust-gz.edu.cn 
+Xiaojun Wu \\[1em]
+xwu647@connect.hkust-gz.edu.cn \\
+wuxiaojun@idea.edu.cn
+
+\vspace{1cm}
+\includegraphics[height=0.9cm, keepaspectratio]{pic/UST.png}
+\hspace{1cm}
+\includegraphics[height=0.9cm, keepaspectratio]{pic/idea.png}
 \end{center}
 \end{frame}
 
